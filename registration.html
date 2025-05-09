@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Eline Education - Registration</title>
+    <link rel="stylesheet" href="registration.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="information"></i>
+                <h1> Eline Education</h1>
+            </div>
+            <h2>Child Registration Form</h2>
+        </header>
+
+        <form id="registrationForm">
+            <div class="form-section">
+                <h3>Child's Information</h3>
+                <div class="form-group">
+                    <label for="childFirstName">First Name*</label>
+                    <input type="text" id="childFirstName" name="childFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="childLastName">Last Name*</label>
+                    <input type="text" id="childLastName" name="childLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="allergies">Allergies/Special Needs</label>
+                    <textarea id="allergies" name="allergies" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Parent/Guardian Information</h3>
+                <div class="form-group">
+                    <label for="parent1Name">Primary Parent/Guardian Name*</label>
+                    <input type="text" id="parent1Name" name="parent1Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent1Phone">Primary Phone*</label>
+                    <input type="tel" id="parent1Phone" name="parent1Phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent1Email">Email*</label>
+                    <input type="email" id="parent1Email" name="parent1Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent2Name">Secondary Parent/Guardian Name</label>
+                    <input type="text" id="parent2Name" name="parent2Name">
+                </div>
+                <div class="form-group">
+                    <label for="parent2Phone">Secondary Phone</label>
+                    <input type="tel" id="parent2Phone" name="parent2Phone">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Emergency Contact (Other than Parents)</h3>
+                <div class="form-group">
+                    <label for="emergencyName">Name*</label>
+                    <input type="text" id="emergencyName" name="emergencyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergencyRelation">Relationship*</label>
+                    <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergencyPhone">Phone*</label>
+                    <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Program Selection</h3>
+                <div class="form-group checkbox-group">
+                    <label>Days Needed*</label>
+                    <div class="checkbox-options">
+                        <label><input type="checkbox" name="days" value="sunday"> Sunday</label>
+                        <label><input type="checkbox" name="days" value="monday"> Monday</label>
+                        <label><input type="checkbox" name="days" value="tuesday"> Tuesday</label>
+                        <label><input type="checkbox" name="days" value="wednesday"> Wednesday</label>
+                        <label><input type="checkbox" name="days" value="thursday"> Thursday</label>
+                        <label><input type="checkbox" name="days" value="saturday"> Saturday</label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="programType">Program Type*</label>
+                    <select id="programType" name="programType" required>
+                        <option value="">Select</option>
+                        <option value="fullDay">Full Day (8am-6pm)</option>
+                        <option value="halfDayMorning">Half Day Morning (8am-1pm)</option>
+                        <option value="halfDayAfternoon">Half Day Afternoon (1pm-6pm)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Desired Start Date*</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Information</h3>
+                <div class="form-group">
+                    <label for="howHeard">How did you hear about us?</label>
+                    <select id="howHeard" name="howHeard">
+                        <option value="">Select</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="social">Social Media</option>
+                        <option value="search">Online Search</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="additionalInfo">Any Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>*
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

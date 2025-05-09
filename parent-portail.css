@@ -1,0 +1,347 @@
+/* styles.css - Navbar Styles */
+
+
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Navbar Container */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: hsl(344, 100%, 93%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo Styles */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoimg {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logoimg {
+    transform: scale(1.05);
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links li a:not(.button):hover {
+    color: #ff4ac9a4;
+}
+
+.nav-links li a:not(.button):after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff4ac9a4;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:not(.button):hover:after {
+    width: 100%;
+}
+
+
+/* Button Styles */
+
+.button {
+    background-color: #ffffff;
+    color: rgb(238, 35, 120) !important;
+    border-radius: 40%;
+    padding: 0.5rem 1.5rem !important;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: hsl(344, 100%, 93%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Mobile Responsive Breakpoint */
+
+@media (max-width: 768px) {
+    /* Stack navbar items vertically */
+    .navbar {
+        flex-direction: column;
+        /* Change to column layout */
+        padding: 15px;
+        /* Adjust padding */
+    }
+    /* Adjust navigation links for mobile */
+    .nav-links {
+        margin-top: 20px;
+        /* Add top margin */
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        justify-content: center;
+        /* Center items */
+    }
+    /* Adjust navigation item spacing */
+    .nav-links li {
+        margin: 10px 15px;
+        /* Even spacing around items */
+    }
+}
+
+
+/* Body Styling */
+
+body {
+    background-color: #f5f7fa;
+    /* Light gray background */
+    color: rgba(224, 153, 188, 0.514);
+    /* Semi-transparent pink text color */
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+
+/* Main Container */
+
+.container {
+    max-width: 1200px;
+    /* Maximum width of 1200px */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 2rem;
+    /* 2rem padding on all sides */
+}
+
+
+/* Portal Header Styling */
+
+.portal-header {
+    text-align: center;
+    /* Center align text */
+    margin-bottom: 3rem;
+    /* Bottom margin */
+}
+
+
+/* Main Heading */
+
+.portal-header h1 {
+    font-size: 2.5rem;
+    /* Large font size */
+    font-weight: 700;
+    /* Bold weight */
+    color: #FF4B7B;
+    /* Pink color */
+}
+
+
+/* Span within Heading */
+
+.portal-header h1 span {
+    color: #102A3A;
+    /* Dark blue color */
+    font-weight: 800;
+    /* Extra bold */
+}
+
+
+/* Programs Grid Container */
+
+.programs-container {
+    display: grid;
+    /* Use CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* Responsive columns */
+    gap: 2rem;
+    /* Space between items */
+}
+
+
+/* Individual Program Card */
+
+.program-card {
+    background: white;
+    /* White background */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Hide overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+}
+
+
+/* Card Hover Effect */
+
+.program-card:hover {
+    transform: translateY(-5px);
+    /* Lift card slightly */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow */
+}
+
+
+/* Program Image Container */
+
+.program-image {
+    height: 200px;
+    /* Fixed height */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+
+/* Program Image Styling */
+
+.program-image img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover container */
+    transition: transform 0.5s ease;
+    /* Smooth zoom */
+}
+
+
+/* Image Hover Effect */
+
+.program-card:hover .program-image img {
+    transform: scale(1.05);
+    /* Slight zoom */
+}
+
+
+/* Program Header Section */
+
+.program-header {
+    background: linear-gradient(135deg, #a05690, #FF4B7B);
+    /* Pink gradient */
+    color: white;
+    /* White text */
+    padding: 1.5rem;
+    /* Padding */
+}
+
+
+/* Program Subtitle */
+
+.program-header h3 {
+    font-size: 1rem;
+    /* Small font size */
+    font-weight: 300;
+    /* Light weight */
+    margin-bottom: 0.5rem;
+    /* Bottom margin */
+}
+
+
+/* Program Title */
+
+.program-header h2 {
+    font-size: 1.8rem;
+    /* Large font size */
+    font-weight: 600;
+    /* Semi-bold */
+}
+
+
+/* Program Content Area */
+
+.program-content {
+    padding: 1.5rem;
+    /* Padding */
+}
+
+
+/* Program Description */
+
+.program-content p {
+    margin-bottom: 1rem;
+    /* Bottom margin */
+    color: #0e0c0d;
+    /* Dark gray text */
+}
+
+
+/* Highlighted Text */
+
+.program-content .highlight {
+    color: #e73ca0;
+    /* Bright pink */
+    font-weight: 600;
+    /* Semi-bold */
+}
+
+
+/* Mobile Responsive Breakpoint */
+
+@media (max-width: 768px) {
+    /* Adjust header size */
+    .portal-header h1 {
+        font-size: 1rem;
+        /* Smaller font size */
+    }
+    /* Single column layout */
+    .programs-container {
+        grid-template-columns: 1fr;
+        /* Single column */
+    }
+    /* Adjust program title size */
+    .program-header h2 {
+        font-size: 2rem;
+        /* Larger font size */
+    }
+    /* Adjust image height */
+    .program-image {
+        height: 180px;
+        /* Slightly smaller */
+    }
+}

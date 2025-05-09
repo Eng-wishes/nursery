@@ -1,0 +1,187 @@
+.outing-title h4 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Add Button */
+
+.add-button {
+    position: absolute;
+    right: 20px;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+/* Schedule Section */
+
+.schedule {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 2px solid #0088ff;
+}
+
+.schedule-header {
+    margin-bottom: 20px;
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    margin-right: 20px;
+}
+
+.school-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.school-details {
+    flex: 1;
+}
+
+
+/* Add Button */
+
+.add-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #FE6788;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FE6788;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Timetable Styles */
+
+.timetable {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+
+/* Subject Colors */
+
+.subject {
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.math {
+    background-color: #50B519;
+}
+
+.arabic {
+    background-color: #2196f3;
+}
+
+.english {
+    background-color: #9c27b0;
+}
+
+.science {
+    background-color: #FEBD00;
+}
+
+.art {
+    background-color: #FE6788;
+}
+
+.pe {
+    background-color: #50B519;
+}
+
+.computers {
+    background-color: #00bcd4;
+}
+
+.music {
+    background-color: #FEBD00;
+}
+
+.review {
+    background-color: #FE6788;
+}
+
+
+/* Animation for images */
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

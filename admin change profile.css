@@ -1,0 +1,104 @@
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+/* Header Styles */
+h1 {
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff9eb7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 158, 183, 0.5);
+}
+
+/* Empty space at the bottom */
+#passwordChangeForm {
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.form-actions {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.btn-update {
+    background-color: #ffb6c1;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.btn-update:hover {
+    background-color: #ff9eb7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form-group {
+        padding: 10px;
+    }
+    
+    .btn-update {
+        width: 100%;
+    }
+}

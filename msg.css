@@ -1,0 +1,507 @@
+    /* styles.css - Navbar Styles */
+    /* Reset and Base Styles */
+    /* Universal selector to reset default margins and padding */
+    
+    * {
+        margin: 0;
+        /* Remove all default margins */
+        padding: 0;
+        /* Remove all default padding */
+        box-sizing: border-box;
+        /* Include padding and border in element's total width/height */
+    }
+    /* Body styles */
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Set default font stack */
+        line-height: 1.6;
+        /* Set base line height for better readability */
+    }
+    /* Navbar Container */
+    /* Main navbar container styles */
+    
+    .navbar {
+        display: flex;
+        /* Use flexbox layout */
+        justify-content: space-between;
+        /* Space items evenly with max space between them */
+        align-items: center;
+        /* Vertically center items */
+        padding: 1rem 2rem;
+        /* 1rem top/bottom, 2rem left/right padding */
+        background-color: hsl(344, 100%, 93%);
+        /* Light pink background */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow for depth */
+        position: fixed;
+        /* Fixed position at top of viewport */
+        width: 100%;
+        /* Full width */
+        top: 0;
+        /* Position at top */
+        z-index: 1000;
+        /* High z-index to ensure navbar stays on top */
+    }
+    /* Logo Styles */
+    /* Logo container styles */
+    
+    .logo {
+        display: flex;
+        /* Use flexbox layout */
+        align-items: center;
+        /* Vertically center items */
+        text-decoration: none;
+        /* Remove underline from link */
+    }
+    /* Logo image styles */
+    
+    .logoimg {
+        height: 50px;
+        /* Fixed height */
+        width: auto;
+        /* Maintain aspect ratio */
+        border-radius: 50%;
+        /* Circular shape */
+        transition: transform 0.3s ease;
+        /* Smooth transform animation */
+    }
+    /* Logo hover effect */
+    
+    .logo:hover .logoimg {
+        transform: scale(1.05);
+        /* Slight scale up on hover */
+    }
+    /* Navigation Links */
+    /* Navigation links container */
+    
+    .nav-links {
+        display: flex;
+        /* Use flexbox layout */
+        list-style: none;
+        /* Remove bullet points */
+        gap: 2rem;
+        /* Space between items */
+    }
+    /* Individual navigation link styles */
+    
+    .nav-links li a {
+        text-decoration: none;
+        /* Remove underline */
+        color: #333;
+        /* Dark gray text color */
+        font-weight: 500;
+        /* Medium font weight */
+        font-size: 1rem;
+        /* Base font size */
+        padding: 0.5rem 1rem;
+        /* Padding around links */
+        transition: all 0.3s ease;
+        /* Smooth transition for all properties */
+        position: relative;
+        /* Positioning context for pseudo-elements */
+    }
+    /* Hover effect for non-button links */
+    
+    .nav-links li a:not(.button):hover {
+        color: #ff4ac9a4;
+        /* Pink color on hover */
+    }
+    /* Underline animation for non-button links */
+    
+    .nav-links li a:not(.button):after {
+        content: '';
+        /* Required for pseudo-element */
+        position: absolute;
+        /* Absolute positioning */
+        width: 0;
+        /* Start with no width */
+        height: 2px;
+        /* Underline height */
+        background: #ff4ac9a4;
+        /* Pink underline color */
+        bottom: 0;
+        /* Position at bottom */
+        left: 0;
+        /* Start from left */
+        transition: width 0.3s ease;
+        /* Animate width change */
+    }
+    /* Hover state for underline animation */
+    
+    .nav-links li a:not(.button):hover:after {
+        width: 100%;
+        /* Full width on hover */
+    }
+    /* Button Styles */
+    /* Button base styles */
+    
+    .button {
+        background-color: #ffffff;
+        /* White background */
+        color: rgb(238, 35, 120) !important;
+        /* Pink text color with !important */
+        border-radius: 40%;
+        /* Circular shape */
+        padding: 0.5rem 1.5rem !important;
+        /* Padding with !important */
+        transition: all 0.3s ease;
+        /* Smooth transition for all properties */
+    }
+    /* Button hover state */
+    
+    .button:hover {
+        background-color: hsl(344, 100%, 93%);
+        /* Light pink background on hover */
+        transform: translateY(-2px);
+        /* Slight upward movement */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Shadow on hover */
+    }
+    /* Responsive Design */
+    /* Media query for screens up to 768px */
+    
+    @media (max-width: 768px) {
+        /* Stack navbar items vertically on mobile */
+        .navbar {
+            padding: 1rem;
+            /* Reduced padding */
+            flex-direction: column;
+            /* Stack items vertically */
+            align-items: flex-start;
+            /* Align items to start */
+        }
+        /* Mobile navigation links */
+        .nav-links {
+            width: 100%;
+            /* Full width */
+            flex-direction: column;
+            /* Stack links vertically */
+            gap: 0.5rem;
+            /* Reduced gap between items */
+            margin-top: 1rem;
+            /* Space from logo */
+            display: none;
+            /* Hidden by default (will be toggled with JS) */
+        }
+        /* Active state for mobile menu */
+        .nav-links.active {
+            display: flex;
+            /* Show when active */
+        }
+        /* Full width list items */
+        .nav-links li {
+            width: 100%;
+            /* Full width items */
+        }
+        /* Mobile link styles */
+        .nav-links li a {
+            display: block;
+            /* Block level links */
+            padding: 0.8rem;
+            /* Increased padding for touch targets */
+        }
+    }
+    
+    * {
+        box-sizing: border-box;
+        /* Include padding/border in width/height */
+        margin: 0;
+        /* Reset margin */
+        padding: 0;
+        /* Reset padding */
+    }
+    /* Body styles */
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Font stack */
+        background-color: #f5f5f5;
+        /* Light gray background */
+        color: #333;
+        /* Dark text color */
+        line-height: 1.6;
+        /* Base line height */
+        padding: 20px;
+        /* Body padding */
+    }
+    /* Main content container */
+    
+    main {
+        max-width: 1200px;
+        /* Maximum width */
+        margin: 80px auto 20px;
+        /* Center with top margin for navbar */
+        padding: 20px;
+        /* Inner padding */
+    }
+    /* Messaging Container */
+    /* Main messaging container */
+    
+    .messaging-container {
+        background-color: white;
+        /* White background */
+        border-radius: 12px;
+        /* Rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+        overflow: hidden;
+        /* Hide overflow */
+        height: 80vh;
+        /* 80% of viewport height */
+        display: flex;
+        /* Flex layout */
+        flex-direction: column;
+        /* Stack children vertically */
+    }
+    /* Messaging header */
+    
+    .messaging-container h1 {
+        padding: 20px;
+        /* Padding around text */
+        background-color: hsl(344, 100%, 93%);
+        /* Light pink background */
+        color: #333;
+        /* Dark text color */
+        font-size: 24px;
+        /* Large font size */
+        border-bottom: 1px solid #e0e0e0;
+        /* Bottom border */
+    }
+    /* Conversation Area */
+    /* Messages container */
+    
+    .conversation {
+        flex-grow: 1;
+        /* Take remaining space */
+        padding: 20px;
+        /* Inner padding */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        display: flex;
+        /* Flex layout */
+        flex-direction: column;
+        /* Stack messages vertically */
+        gap: 16px;
+        /* Space between messages */
+        background-color: #fafafa;
+        /* Light background */
+    }
+    /* Message Bubbles */
+    /* Base message styles */
+    
+    .message {
+        max-width: 70%;
+        /* Maximum width */
+        padding: 12px 16px;
+        /* Inner padding */
+        border-radius: 18px;
+        /* Rounded corners */
+        position: relative;
+        /* Positioning context */
+        word-wrap: break-word;
+        /* Break long words */
+    }
+    /* Sender name styles */
+    
+    .message .sender {
+        font-weight: bold;
+        /* Bold text */
+        font-size: 14px;
+        /* Small font size */
+        margin-bottom: 4px;
+        /* Space below */
+        color: #555;
+        /* Medium gray color */
+    }
+    /* Message content styles */
+    
+    .message .content {
+        font-size: 15px;
+        /* Base font size */
+        line-height: 1.4;
+        /* Comfortable line height */
+    }
+    /* Timestamp styles */
+    
+    .message .time {
+        font-size: 12px;
+        /* Small font size */
+        color: #999;
+        /* Light gray color */
+        text-align: right;
+        /* Right aligned */
+        margin-top: 4px;
+        /* Space above */
+    }
+    /* Received Messages */
+    /* Styles for received messages */
+    
+    .message.received {
+        background-color: white;
+        /* White background */
+        border: 1px solid #e0e0e0;
+        /* Light border */
+        align-self: flex-start;
+        /* Align left */
+        border-bottom-left-radius: 4px;
+        /* Adjusted corner */
+    }
+    /* Sent Messages */
+    /* Styles for sent messages */
+    
+    .message.sent {
+        background-color: hsl(344, 100%, 85%);
+        /* Pink background */
+        color: #333;
+        /* Dark text */
+        align-self: flex-end;
+        /* Align right */
+        border-bottom-right-radius: 4px;
+        /* Adjusted corner */
+    }
+    /* Message Input Area */
+    /* Input area container */
+    
+    .message-input {
+        display: flex;
+        /* Flex layout */
+        padding: 16px;
+        /* Inner padding */
+        background-color: white;
+        /* White background */
+        border-top: 1px solid #e0e0e0;
+        /* Top border */
+        align-items: flex-end;
+        /* Align items to bottom */
+        gap: 12px;
+        /* Space between elements */
+    }
+    /* Textarea styles */
+    
+    .message-input textarea {
+        flex-grow: 1;
+        /* Take remaining space */
+        border: 1px solid #ddd;
+        /* Light border */
+        border-radius: 20px;
+        /* Rounded corners */
+        padding: 12px 16px;
+        /* Inner padding */
+        resize: none;
+        /* Disable manual resize */
+        min-height: 50px;
+        /* Minimum height */
+        max-height: 120px;
+        /* Maximum height before scrolling */
+        font-family: inherit;
+        /* Inherit font */
+        font-size: 15px;
+        /* Base font size */
+        outline: none;
+        /* Remove outline */
+        transition: border 0.3s;
+        /* Smooth border transition */
+    }
+    /* Textarea focus state */
+    
+    .message-input textarea:focus {
+        border-color: hsl(344, 100%, 70%);
+        /* Pink border on focus */
+    }
+    /* Send button styles */
+    
+    .message-input button {
+        background-color: hsl(344, 100%, 70%);
+        /* Pink background */
+        color: white;
+        /* White text */
+        border: none;
+        /* No border */
+        border-radius: 20px;
+        /* Rounded corners */
+        padding: 12px 24px;
+        /* Inner padding */
+        font-weight: bold;
+        /* Bold text */
+        cursor: pointer;
+        /* Pointer cursor */
+        transition: background-color 0.3s;
+        /* Smooth color transition */
+    }
+    /* Send button hover state */
+    
+    .message-input button:hover {
+        background-color: hsl(344, 100%, 60%);
+        /* Darker pink on hover */
+    }
+    /* Scrollbar Styling */
+    /* Webkit scrollbar */
+    
+    .conversation::-webkit-scrollbar {
+        width: 8px;
+        /* Narrow scrollbar */
+    }
+    /* Scrollbar track */
+    
+    .conversation::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Light track */
+        border-radius: 10px;
+        /* Rounded corners */
+    }
+    /* Scrollbar thumb */
+    
+    .conversation::-webkit-scrollbar-thumb {
+        background: #ccc;
+        /* Gray thumb */
+        border-radius: 10px;
+        /* Rounded corners */
+    }
+    /* Scrollbar thumb hover */
+    
+    .conversation::-webkit-scrollbar-thumb:hover {
+        background: #aaa;
+        /* Darker gray on hover */
+    }
+    /* Responsive Design */
+    /* Tablet and smaller screens */
+    
+    @media (max-width: 768px) {
+        /* Wider message bubbles */
+        .message {
+            max-width: 85%;
+        }
+        /* Full height messaging container */
+        .messaging-container {
+            height: calc(100vh - 100px);
+            /* Account for navbar */
+            border-radius: 0;
+            /* Remove rounded corners */
+        }
+        /* Adjusted main container */
+        main {
+            margin: 60px 0 0;
+            /* Adjusted margins */
+            padding: 0;
+            /* No padding */
+        }
+    }
+    /* Mobile screens */
+    
+    @media (max-width: 480px) {
+        /* Stack input area elements */
+        .message-input {
+            flex-direction: column;
+            /* Stack vertically */
+        }
+        /* Full width button */
+        .message-input button {
+            width: 100%;
+            /* Full width */
+        }
+        /* Wider message bubbles */
+        .message {
+            max-width: 90%;
+        }
+    }
